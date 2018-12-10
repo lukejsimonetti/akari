@@ -1,0 +1,5 @@
+{
+  "index.css": "/css/index.css",
+  "index.js": "/js/index.bundle.js",
+  "vendor.js": "/js/vendor.bundle.js"
+}
