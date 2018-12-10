@@ -1,56 +1,63 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Form, Field } from 'react-final-form'
+import { Row, Col, Button } from 'reactstrap'
+import InputText from '../helper/Form/InputText'
+import * as v from '../Helper/Form/validators'
 
-const Add = () => {
-    const onSubmit = () => {
-        
+const Add = (props) => {
+    const [accounts, setAccount ] = useState()
+    const onSubmit = (v) => {
+        setAccount(v)
+        props.history.push('/account/list')
     }
-    const validate = () => {
-        validate
-    }
+
     return (
-    <Form
-        onSubmit={onSubmit}
-        validate={validate}
-        render={({ handleSubmit, pristine, invalid }) => (
-            <form onSubmit={handleSubmit}>
-                <h2>Simple Default Input</h2>
-                <div>
-                    <label>First Name</label>
-                    <Field name="firstName" component="input" placeholder="First Name" />
-                </div>
-
-                <h2>An Arbitrary Reusable Input Component</h2>
-
-
-                <h2>Render Function</h2>
-                <Field
-                    name="bio"
-                    render={({ input, meta }) => (
-                        <div>
-                            <label>Bio</label>
-                            <textarea {...input} />
-                            {meta.touched && meta.error && <span>{meta.error}</span>}
-                        </div>
-                    )}
-                />
-
-                <h2>Render Function as Children</h2>
-                <Field name="phone">
-                    {({ input, meta }) => (
-                        <div>
-                            <label>Phone</label>
-                            <input type="text" {...input} placeholder="Phone" />
-                            {meta.touched && meta.error && <span>{meta.error}</span>}
-                        </div>
-                    )}
-                </Field>
-
-                <button type="submit" disabled={pristine || invalid}>
-                    Submit
-            </button>
-            </form>
-        )}
-    />)
+        <Form
+            onSubmit={onSubmit}
+            render={({ handleSubmit, pristine, invalid }) => (
+                <form onSubmit={handleSubmit}>
+                    <h2>Add Account</h2>
+                    <Row>
+                        <Col sm={3}>
+                            <Field
+                                name="first_name"
+                                label="First Name"
+                                type="text"
+                                placeholder="John"
+                                validate={v.required}
+                                component={InputText}
+                            />
+                        </Col>
+                        <Col sm={3}>
+                            <Field
+                                name="last_name"
+                                label="Last Name"
+                                type="text"
+                                placeholder="Smith"
+                                validate={v.required}
+                                component={InputText}
+                            />
+                        </Col>
+                        <Col sm={3}>
+                            <Field
+                                name="user_email"
+                                label="User Email"
+                                type="text"
+                                placeholder="user@email.com"
+                                validate={v.required}
+                                component={InputText}
+                            />
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={12}>
+                            <div className="pull-right btn-array">
+                                <Button color="primary" type="submit" disabled={pristine || invalid}>Submit</Button>
+                            </div>
+                        </Col>
+                    </Row>
+                </form>
+            )}
+        />)
 }
 export default Add

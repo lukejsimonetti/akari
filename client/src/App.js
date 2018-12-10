@@ -13,6 +13,7 @@ import Footer from './Footer/Footer'
 import Aside from './Aside/Aside'
 
 import AccountAdd from './Account/Add'
+import AccountList from './Account/List'
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
                     <Switch>
                       <Route path="/dashboard" name="Dashboard" component={Dashboard} />
                       <Route path="/account/add" name="Account Add" component={AccountAdd} />
+                      <Route path="/account/list" name="Account Add" component={AccountList} />
                     </Switch>
                   </Container>
                 </div>
