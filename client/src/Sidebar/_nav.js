@@ -12,7 +12,7 @@ export default {
     },
     {
       name: 'Accounts',
-      url: '/accounts',
+      url: '/account/list',
       icon: 'icon-organization'
     },
   ]

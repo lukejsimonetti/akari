@@ -33,6 +33,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
+    "constate": "next",
     "final-form": "^4.11.0",
     "flag-icon-css": "2.9.0",
     "font-awesome": "^4.7.0",
