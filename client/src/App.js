@@ -5,15 +5,14 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
 import { GlobalProvider, GlobalContext } from './GlobalProvider';
-import Dashboard from './Dashboard'
+import Dashboard from './Component/Dashboard/Dashboard'
 
 import Sidebar from './Sidebar/Sidebar'
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Aside from './Aside/Aside'
 
-import AccountAdd from './Account/Add'
-import AccountList from './Account/List'
+import AccountRoutes from './Account/Routes'
 
 import { Provider } from "constate";
 
@@ -32,8 +31,7 @@ class App extends Component {
                     <Container fluid>
                       <Switch>
                         <Route path="/dashboard" name="Dashboard" component={Dashboard} />
-                        <Route path="/account/add" name="Account Add" component={AccountAdd} />
-                        <Route path="/account/list" name="Account Add" component={AccountList} />
+                        <Route path="/account" name="Account" component={AccountRoutes} />
                       </Switch>
                     </Container>
                   </div>
