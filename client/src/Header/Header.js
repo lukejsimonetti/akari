@@ -35,7 +35,7 @@ class Header extends Component {
           <span className="navbar-toggler-icon"></span>
         </NavbarToggler>
         <NavbarBrand href="#">
-          <h3 style={{fontWeight: 300}}> <i className="fa fa-tree" /> Akari IMS</h3>
+          <h3 style={{fontWeight: 300}}> <i className="fa fa-archive" /> Akari IMS</h3>
         </NavbarBrand>
         <NavbarToggler className="d-md-down-none mr-auto" onClick={this.sidebarToggle}>
           <span className="navbar-toggler-icon"></span>

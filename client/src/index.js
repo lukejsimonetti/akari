@@ -4,6 +4,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import '../scss/style.scss'
+import 'font-awesome/css/font-awesome.min.css'
+// Import Simple Line Icons Set
+import 'simple-line-icons/css/simple-line-icons.css'
+
+// Import nprogress styles
+// import 'nprogress/nprogress.css'
+
+// Temp fix for reactstrap
+import '../scss/core/_dropdown-menu-right.scss'
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

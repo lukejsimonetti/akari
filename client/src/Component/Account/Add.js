@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Form, Field } from 'react-final-form'
 import { Row, Col, Button } from 'reactstrap'
-import InputText from '../helper/Form/InputText'
-import * as v from '../Helper/Form/validators'
+import InputText from '../../helper/Form/InputText'
+import * as v from '../../Helper/Form/validators'
 
 import { useContextState } from "constate";
 

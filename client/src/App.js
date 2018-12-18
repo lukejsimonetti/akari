@@ -12,7 +12,7 @@ import Header from './Header/Header'
 import Footer from './Footer/Footer'
 import Aside from './Aside/Aside'
 
-import AccountRoutes from './Account/Routes'
+import AccountRoutes from './Component/Account/Routes'
 
 import { Provider } from "constate";
 

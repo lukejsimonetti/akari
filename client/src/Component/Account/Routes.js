@@ -2,7 +2,7 @@ import React from "react"
 import { Switch, Route } from "react-router-dom"
 
 import AccountAdd from './Add'
-import AccountList from './AccountList'
+import AccountList from './List'
 
 const Routes = props => {
     return (
